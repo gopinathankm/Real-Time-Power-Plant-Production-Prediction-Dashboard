@@ -1,0 +1,95 @@
+1. Objective: Predict real time power product and monitoringoptimized accuracy.
+
+2. Requirments:
+
+Ubuntu 16.04 LTS
+Java 8
+Apache Zookeeper
+Apache Kafka
+Kafka-python
+Python 3.6.3, Anaconda 5.0.1
+Flask
+Flask_SocketIO
+Matplotlib
+Numpy
+Pandas
+scikit-learn              
+scipy                    
+sklearn-pandas            
+sklearn-pmml              
+sklearn2pmml
+xlrd
+
+3. Steps & Usage:
+
+A. Start Apache Zookeeper
+B. Start Apache Kafka
+C. Create a topic
+D. A Logistic Regression  Prediction model(For that matter any algorithms of any sort) is created off-line for power plant production prediction using  
+   historical live data, optimized accuracy using Scikit-Learn.
+E. Serialized model and converted to PMML format for on-line prediction using JPMML.
+F. Sensor data generated real time power plant for features.
+G. Pumped into Kafka topics.
+H. Real time Kafka consumer, (Which is actually a Openscoring python client and Python_SocketIO client) consumes data.
+I. Predict on-line using Openscoring server using consumed data.
+J. Dynamically update flask web page dashboard with on-line features and predicted data for that features on line.
+
+Screen:
+
+Power Plant Production Prediction Dashboard
+Predictions:
+
+Connected: undefined
+Features: {"AT" : 32.98,"V" : 38.85,"AP" : 1004.65,"RH" : 96.05}
+Power Prediction: {'PE': 453.2953781431664}
+Features: {"AT" : 26.23,"V" : 75.5,"AP" : 1029.55,"RH" : 74.21}
+Power Prediction: {'PE': 436.23087080639175}
+Features: {"AT" : 14.31,"V" : 65.02,"AP" : 1019.25,"RH" : 36.22}
+Power Prediction: {'PE': 449.40409083029164}
+Features: {"AT" : 29.5,"V" : 25.46,"AP" : 1032.54,"RH" : 95.26}
+Power Prediction: {'PE': 469.5170714909701}
+Features: {"AT" : 25.12,"V" : 45.64,"AP" : 1011.92,"RH" : 45.83}
+Power Prediction: {'PE': 452.2769469191351}
+Features: {"AT" : 3.13,"V" : 26.35,"AP" : 1016.04,"RH" : 95.34}
+Power Prediction: {'PE': 491.31887797522916}
+Features: {"AT" : 31.18,"V" : 64.83,"AP" : 993.49,"RH" : 98.38}
+Power Prediction: {'PE': 436.0191623965831}
+Features: {"AT" : 2.32,"V" : 57.88,"AP" : 1003.02,"RH" : 95.49}
+Power Prediction: {'PE': 468.8796730668184}
+Features: {"AT" : 30.29,"V" : 25.89,"AP" : 1011.8,"RH" : 99.3}
+Power Prediction: {'PE': 465.92815559491055}
+Features: {"AT" : 36.09,"V" : 71.34,"AP" : 992.92,"RH" : 41.52}
+Power Prediction: {'PE': 421.45916525222896}
+Features: {"AT" : 36.62,"V" : 47.12,"AP" : 1023.98,"RH" : 94.54}
+Power Prediction: {'PE': 446.8757845361872}
+Features: {"AT" : 21.7,"V" : 58.12,"AP" : 1003.3,"RH" : 85.44}
+Power Prediction: {'PE': 449.60966616534745}
+Features: {"AT" : 6.29,"V" : 31.73,"AP" : 1001.61,"RH" : 43.49}
+Power Prediction: {'PE': 477.67991506954525}
+Features: {"AT" : 3.99,"V" : 63.75,"AP" : 1009.79,"RH" : 94.44}
+Power Prediction: {'PE': 464.195612550985}
+Features: {"AT" : 29.34,"V" : 29.72,"AP" : 1025.89,"RH" : 49.36}
+Power Prediction: {'PE': 461.4277847047274}
+Features: {"AT" : 34.02,"V" : 69.33,"AP" : 1018.15,"RH" : 87.55}
+Power Prediction: {'PE': 432.7662150915211}
+Features: {"AT" : 18.26,"V" : 37.16,"AP" : 999.89,"RH" : 74.01}
+Power Prediction: {'PE': 465.45777566397265}
+Features: {"AT" : 34.07,"V" : 64.72,"AP" : 999.65,"RH" : 81.19}
+Power Prediction: {'PE': 432.60580619215045}
+Features: {"AT" : 33.41,"V" : 39.54,"AP" : 1029.6,"RH" : 85.47}
+Power Prediction: {'PE': 454.9503175521222}
+Features: {"AT" : 5.6,"V" : 28.24,"AP" : 993.18,"RH" : 91.96}
+Power Prediction: {'PE': 484.1508532551765}
+Features: {"AT" : 32.53,"V" : 50.02,"AP" : 1011.66,"RH" : 44.65}
+Power Prediction: {'PE': 442.2068790401004}
+Features: {"AT" : 15.03,"V" : 75.59,"AP" : 999.86,"RH" : 57.86}
+Power Prediction: {'PE': 440.89199261054443}
+Features: {"AT" : 21.36,"V" : 25.37,"AP" : 1010.48,"RH" : 54.49}
+Power Prediction: {'PE': 470.16703494473177}
+Features: {"AT" : 22.33,"V" : 80.96,"AP" : 1024.75,"RH" : 77.2}
+Power Prediction: {'PE': 435.7957321333711}
+Features: {"AT" : 19.83,"V" : 79.16,"AP" : 1005.08,"RH" : 64.02}
+Power Prediction: {'PE': 435.30241847944984}
+Features: {"AT" : 11.47,"V" : 63.38,"AP" : 999.27,"RH" : 48.38}
+Power Prediction: {'PE': 451.5112260961399}
+
